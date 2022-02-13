@@ -42,6 +42,7 @@ const styles = StyleSheet.create({
     fontFamily: AppStyles.fonts.FONT_BOLD,
     fontSize: 24,
     marginLeft: 10,
+    marginTop: Platform.OS === 'android' ? -2 : 0,
   },
   bottomView: {
     flex: 1,
@@ -196,6 +197,9 @@ const styles = StyleSheet.create({
     marginTop: 6,
     borderRadius: 30,
     backgroundColor: AppStyles.colors.COLOR_PRIMARY_TRANSPARENT,
+  },
+  bottomMargin: {
+    marginBottom: 20,
   },
 });
 export default styles;

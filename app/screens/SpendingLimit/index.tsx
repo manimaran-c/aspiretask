@@ -28,7 +28,7 @@ const SpendingLimit: React.FC = () => {
   return (
     <View style={styles.container}>
       <Header showBack={true} />
-      <Text style={styles.header}>Spending Limit</Text>
+      <Text style={styles.header}>Spending limit</Text>
       <View style={styles.bottomView}>
         <View style={styles.limitView}>
           <Images.meter width={16} height={16} />

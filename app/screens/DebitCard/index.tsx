@@ -13,7 +13,7 @@ import * as debitcardActions from 'app/store/actions/debitcardActions';
 import IState from 'app/models/reducers';
 
 const deviceHeight = Dimensions.get('window').height;
-let topPadding = 579 + 80;
+let topPadding = 500;
 let bottomPadding = deviceHeight / 2;
 const pinHideText = '***';
 
@@ -50,7 +50,12 @@ const DebitCard: React.FC = () => {
       return percentage;
     }
   };
-
+  const getSubMenuText = (index: number) => {
+    if (index === 1 && debitCard.limitEnabled) {
+      return 'Your weekly spending limit is S$ ' + debitCard.limitAmount;
+    }
+    return cardMenu[index].subTitle;
+  };
   return (
     <View style={styles.container}>
       <Header />
@@ -69,14 +74,15 @@ const DebitCard: React.FC = () => {
       >
         <View
           onLayout={event => {
-            // var {height} = event.nativeEvent.layout;
-            // bottomPadding = height;
+            var {height} = event.nativeEvent.layout;
+            topPadding = height + 20;
           }}
         >
           <View style={[styles.cardContainerView]}>
             <TouchableOpacity
               style={styles.showHideView}
               onPress={() => setShowCard(!showCard)}
+              activeOpacity={1}
             >
               {showCard ? (
                 <Images.hide_eye
@@ -170,7 +176,10 @@ const DebitCard: React.FC = () => {
           {cardMenu.map((value, index) => {
             return (
               <TouchableOpacity
-                style={styles.menuView}
+                style={[
+                  styles.menuView,
+                  index === cardMenu.length - 1 && styles.bottomMargin,
+                ]}
                 key={index.toString()}
                 disabled={value.disabled}
                 onPress={() => onMenuPressed(index)}
@@ -182,7 +191,9 @@ const DebitCard: React.FC = () => {
                 />
                 <View style={[value.showSwitch && styles.menuWidth]}>
                   <Text style={styles.menuText}>{value.title}</Text>
-                  <Text style={styles.menuSubText}>{value.subTitle}</Text>
+                  <Text style={styles.menuSubText}>
+                    {getSubMenuText(index)}
+                  </Text>
                 </View>
                 {value.showSwitch && (
                   <Switch

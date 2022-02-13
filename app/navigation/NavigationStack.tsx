@@ -15,75 +15,39 @@ import AppStyles from 'app/config/AppStyles';
 const Stack = createStackNavigator();
 const MainTab = createBottomTabNavigator();
 
+const getTabBarIcon = (name: string, focused: boolean) => {
+  let IconName;
+  if (name === 'Home') {
+    IconName = Images.home;
+  } else if (name === 'Debit Card') {
+    IconName = Images.debitcard;
+  } else if (name === 'Payments') {
+    IconName = Images.payments;
+  } else if (name === 'Credit') {
+    IconName = Images.credit;
+  } else {
+    IconName = Images.profile;
+  }
+  return (
+    <IconName
+      width={24}
+      height={24}
+      fill={
+        focused
+          ? AppStyles.colors.COLOR_PRIMARY
+          : AppStyles.colors.COLOR_UN_SELECTED_TAB
+      }
+    />
+  );
+};
 const MainTabNavigator = () => {
   return (
     <MainTab.Navigator
       screenOptions={({route}) => ({
         headerShown: false,
         tabBarIcon: ({focused}) => {
-          if (route.name === 'Home') {
-            return (
-              <Images.home
-                width={24}
-                height={24}
-                fill={
-                  focused
-                    ? AppStyles.colors.COLOR_PRIMARY
-                    : AppStyles.colors.COLOR_UN_SELECTED_TAB
-                }
-              />
-            );
-          } else if (route.name === 'Debit Card') {
-            return (
-              <Images.debitcard
-                width={24}
-                height={24}
-                fill={
-                  focused
-                    ? AppStyles.colors.COLOR_PRIMARY
-                    : AppStyles.colors.COLOR_UN_SELECTED_TAB
-                }
-              />
-            );
-          } else if (route.name === 'Payments') {
-            return (
-              <Images.payments
-                width={24}
-                height={24}
-                fill={
-                  focused
-                    ? AppStyles.colors.COLOR_PRIMARY
-                    : AppStyles.colors.COLOR_UN_SELECTED_TAB
-                }
-              />
-            );
-          } else if (route.name === 'Credit') {
-            return (
-              <Images.credit
-                width={24}
-                height={24}
-                fill={
-                  focused
-                    ? AppStyles.colors.COLOR_PRIMARY
-                    : AppStyles.colors.COLOR_UN_SELECTED_TAB
-                }
-              />
-            );
-          } else {
-            return (
-              <Images.profile
-                width={24}
-                height={24}
-                fill={
-                  focused
-                    ? AppStyles.colors.COLOR_PRIMARY
-                    : AppStyles.colors.COLOR_UN_SELECTED_TAB
-                }
-              />
-            );
-          }
+          return getTabBarIcon(route.name, focused);
         },
-
         tabBarActiveTintColor: AppStyles.colors.COLOR_PRIMARY,
         tabBarInactiveTintColor: AppStyles.colors.COLOR_UN_SELECTED_TAB,
         tabBarStyle: {
@@ -97,6 +61,8 @@ const MainTabNavigator = () => {
             width: 3,
             height: 3,
           },
+          paddingBottom: 8,
+          paddingTop: 9,
         },
         tabBarLabelStyle: {
           fontSize: 9,

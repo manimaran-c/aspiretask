@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
   limitText: {
     fontFamily: AppStyles.fonts.FONT_MEDIUM,
     fontSize: 14,
-    color: AppStyles.colors.COLOR_TEXT_BLACK_TRANSPARENT,
+    color: AppStyles.colors.COLOR_TEXT_BLACK,
     marginLeft: 20,
   },
   placeholder: {
@@ -45,7 +45,7 @@ const styles = StyleSheet.create({
     borderRadius: 30,
     justifyContent: 'center',
     shadowColor: '#0000001F',
-    shadowOffset: {width: 1, height: 2},
+    shadowOffset: {width: 2, height: 2},
     shadowOpacity: 0.6,
     shadowRadius: 3,
     elevation: 5,
@@ -60,7 +60,7 @@ const styles = StyleSheet.create({
   },
   inputView: {
     flexDirection: 'row',
-    marginVertical: 15,
+    marginTop: 15,
     width: '100%',
     alignItems: 'center',
   },
@@ -83,6 +83,7 @@ const styles = StyleSheet.create({
     fontSize: 24,
     marginHorizontal: 15,
     width: '80%',
+    height: 50,
   },
   underline: {
     backgroundColor: AppStyles.colors.COLOR_UNDERLINE,

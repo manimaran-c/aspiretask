@@ -11,14 +11,14 @@ import {
 } from 'app/models/actions/debitcard';
 const initialState: IDebitCardState = {
   limitAmount: '',
-  balance: '',
-  amountSpend: '',
+  balance: '5000',
+  amountSpend: '1000',
   limitEnabled: false,
   cardDetails: {
-    cardHolderName: '',
-    cardNumber: 'xxxx-xxxx-xxxx-xxxx',
-    cardCvv: '',
-    cardValidity: '',
+    cardHolderName: 'Johny Wick',
+    cardNumber: '4543-6565-2496-3457', //'xxxx-xxxx-xxxx-xxxx'
+    cardCvv: '123',
+    cardValidity: '12/25',
   },
 };
 

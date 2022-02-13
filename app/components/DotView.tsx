@@ -1,3 +1,6 @@
+/**
+ * Display Dot to Hide Card Details
+ */
 import React from 'react';
 import {StyleSheet, TextProps, View} from 'react-native';
 import AppStyles from 'app/config/AppStyles';

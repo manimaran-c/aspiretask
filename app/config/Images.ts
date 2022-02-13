@@ -1,3 +1,6 @@
+/*
+ * Provides universal images used in the app.
+ */
 import credit from 'app/assets/images/credit.svg';
 import debitcard from 'app/assets/images/debitcard.svg';
 import eye_close from 'app/assets/images/eye_close.svg';
@@ -10,7 +13,6 @@ import meter from 'app/assets/images/meter.svg';
 import show_eye from 'app/assets/images/show_eye.svg';
 import hide_eye from 'app/assets/images/hide_eye.svg';
 import logo_aspire from 'app/assets/images/logo_aspire.svg';
-
 import topup from 'app/assets/images/topup.svg';
 import spend from 'app/assets/images/spend.svg';
 import freeze from 'app/assets/images/freeze.svg';

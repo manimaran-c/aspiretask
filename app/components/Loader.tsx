@@ -1,3 +1,6 @@
+/**
+ * Common Loader to show progress
+ */
 import React from 'react';
 import {StyleSheet, View, Modal, ActivityIndicator} from 'react-native';
 import {useSelector} from 'react-redux';

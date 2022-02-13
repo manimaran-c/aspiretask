@@ -1,3 +1,6 @@
+/**
+ * Common Text Component
+ */
 import React from 'react';
 import {Text as RText, StyleSheet, TextProps} from 'react-native';
 import AppStyles from 'app/config/AppStyles';

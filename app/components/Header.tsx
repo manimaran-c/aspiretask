@@ -1,3 +1,6 @@
+/**
+ * Common Header with Back button and Logo
+ */
 import AppStyles from 'app/config/AppStyles';
 import Images from 'app/config/Images';
 import NavigationService from 'app/navigation/NavigationService';
