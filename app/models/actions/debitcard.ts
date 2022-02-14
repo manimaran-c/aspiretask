@@ -5,7 +5,7 @@ export interface ILimitRequestState {
   limitAmount: string;
 }
 
-export interface ILoginResponseState {
+export interface ICardResponseState {
   type: String;
   response: ICardResponse;
 }

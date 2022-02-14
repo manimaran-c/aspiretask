@@ -1,0 +1,112 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`dotView renders correctly across screens 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "flexDirection": "row",
+        "marginLeft": 24,
+      },
+      undefined,
+    ]
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#FFFFFF",
+          "borderRadius": 8,
+          "height": 8,
+          "marginLeft": 6,
+          "width": 8,
+        },
+        Object {
+          "marginLeft": 0,
+        },
+      ]
+    }
+  />
+  <View
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#FFFFFF",
+          "borderRadius": 8,
+          "height": 8,
+          "marginLeft": 6,
+          "width": 8,
+        },
+        false,
+      ]
+    }
+  />
+  <View
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#FFFFFF",
+          "borderRadius": 8,
+          "height": 8,
+          "marginLeft": 6,
+          "width": 8,
+        },
+        false,
+      ]
+    }
+  />
+  <View
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#FFFFFF",
+          "borderRadius": 8,
+          "height": 8,
+          "marginLeft": 6,
+          "width": 8,
+        },
+        false,
+      ]
+    }
+  />
+</View>
+`;
+
+exports[`header renders correctly across screens 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#0C365A",
+        "flexDirection": "row",
+        "height": 56,
+        "justifyContent": "space-between",
+        "paddingHorizontal": 24,
+      },
+    ]
+  }
+>
+  <View />
+  <SvgMock
+    height={26}
+    width={26}
+  />
+</View>
+`;
+
+exports[`text renders correctly across screens 1`] = `
+<Text
+  style={
+    Array [
+      Object {
+        "color": "#FFFFFF",
+        "fontFamily": "Metropolis-Regular",
+        "fontSize": 14,
+      },
+      undefined,
+    ]
+  }
+/>
+`;

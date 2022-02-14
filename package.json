@@ -57,7 +57,7 @@
       "./node_modules/react-native-gesture-handler/jestSetup.js"
     ],
     "transformIgnorePatterns": [
-      "/node_modules/(?!(@react-native|react-native)).*/"
+      "node_modules/(?!(@react-native|react-native|react-navigation|redux-persist|react-native-iphone-x-helper)/)"
     ],
     "moduleFileExtensions": [
       "ts",

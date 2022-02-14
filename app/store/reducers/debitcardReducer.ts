@@ -1,5 +1,5 @@
-/* Login Reducer
- * handles login states in the app
+/* Debit card Reducer
+ * handles card states in the app
  */
 import createReducer from 'app/lib/createReducer';
 import * as types from 'app/store/actions/types';
@@ -7,7 +7,7 @@ import * as types from 'app/store/actions/types';
 import {IDebitCardState} from 'app/models/reducers/debitcard';
 import {
   ILimitRequestState,
-  ILoginResponseState,
+  ICardResponseState,
 } from 'app/models/actions/debitcard';
 const initialState: IDebitCardState = {
   limitAmount: '',
@@ -41,7 +41,7 @@ export const debitcardReducer = createReducer(initialState, {
   },
   [types.GET_CARD_INFO_RESPONSE](
     state: IDebitCardState,
-    action: ILoginResponseState,
+    action: ICardResponseState,
   ) {
     return {
       ...state,

@@ -32,6 +32,10 @@
 - As `Avenir Next` font is not available for free, I used `Metropolis` font
 - I Used `React Native Paper` for Switch UI, so iOS and Android switches will be different as they are displayed in their native UI
 
+##### API Mock Response
+
+`{ "data": [ { "cardDetails": { "cardHolderName": "Jessie Kerluke", "cardNumber": "3056-9309-0259-0486", "cardValidity": "10/24", "cardCvv": "590" }, "balance": "5000", "amountSpend": "1000", "id": "1" } ] }`
+
 ## User Stories
 
 ### US-1: "Debit Card" page functionalities.

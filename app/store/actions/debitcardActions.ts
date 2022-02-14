@@ -1,5 +1,5 @@
 /*
- * Reducer actions related with login
+ * Reducer actions related with debitcard
  */
 import {ICardResponse} from 'app/models/api/debitCard';
 import * as types from './types';

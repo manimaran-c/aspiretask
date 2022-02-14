@@ -111,26 +111,24 @@ const DebitCard: React.FC = () => {
                 {debitCardInfo && debitCardInfo.cardHolderName}
               </Text>
               <View style={styles.cardNumView}>
-                {showCard ? (
-                  <Text style={[styles.cardNumTxt, styles.zeroMarginLeft]}>
-                    {debitCardNumber[0]}
-                  </Text>
-                ) : (
-                  <DotView style={styles.zeroMarginLeft} />
-                )}
-
-                {showCard ? (
-                  <Text style={styles.cardNumTxt}>{debitCardNumber[1]}</Text>
-                ) : (
-                  <DotView />
-                )}
-
-                {showCard ? (
-                  <Text style={styles.cardNumTxt}>{debitCardNumber[2]}</Text>
-                ) : (
-                  <DotView />
-                )}
-                <Text style={styles.cardNumTxt}>{debitCardNumber[3]}</Text>
+                {debitCardNumber.map((number, index) => {
+                  return (
+                    <>
+                      {showCard || index === debitCardNumber.length - 1 ? (
+                        <Text
+                          style={[
+                            styles.cardNumTxt,
+                            index === 0 && styles.zeroMarginLeft,
+                          ]}
+                        >
+                          {number}
+                        </Text>
+                      ) : (
+                        <DotView style={index === 0 && styles.zeroMarginLeft} />
+                      )}
+                    </>
+                  );
+                })}
               </View>
               <View style={styles.dateView}>
                 <Text style={styles.titleTxt}>{'Thru: '}</Text>
